@@ -6,7 +6,7 @@ import tensorflow as tf
 import scipy
 import os
 import time
-
+import mlflow
 
 class TimeHistory(tf.keras.callbacks.Callback):
     def on_train_begin(self, logs={}):
@@ -30,26 +30,31 @@ path = 'WasteImagesDataset'
 IMG_SIZE = 224
 epochs = 5
 
+exp_name = "input_pipeline"
+mlflow.set_experiment(exp_name)
+# with mlflow.start_run():
+#     mlflow.tensorflow.autolog()
+
 datagen = tf.keras.preprocessing.image.ImageDataGenerator()
 dataset = datagen.flow_from_directory(path, (IMG_SIZE, IMG_SIZE), batch_size=32, class_mode='sparse')
 
 num_classes = len(os.listdir(path))
 model = build_model(num_classes)
 
-
-# for epoch in range(10):
-#     start = time.time()
-#     model.fit(dataset, epochs=1, batch_size=32, verbose=2)
-#     end = time.time()
-#
-#     times.append(end - start)
-#     epochs.append(epoch)
-#
-# plot_time_per_epoch(model, epochs, times)
-
 time_callback = TimeHistory()
 model.fit(dataset, epochs=epochs, batch_size=32, verbose=2, callbacks=[time_callback])
 
-plot_time_per_epoch(model, range(epochs), time_callback.times)
+# Log the epoch times in MLflow
+with mlflow.start_run(run_name='t3'):
+    for epoch, epoch_time in enumerate(time_callback.times):
+        mlflow.log_param('epoch', epochs)
+        mlflow.log_metric(f'epoch_{epoch}_time', epoch_time)
 
+    # plot_time_per_epoch(model, range(epochs), time_callback.times)
 
+# exp_name = "input_pipeline"
+# mlflow.set_experiment(exp_name)
+# with mlflow.start_run():
+#     mlflow.tensorflow.autolog()
+#     mlflow.log_metric("timeperepoch", time_callback.times)
+#     mlflow.log_param("epochs", epochs)
