@@ -33,6 +33,7 @@ model = build_model(num_classes)
 time_callback = TimeHistory()
 model.fit(dataset, epochs=epochs, batch_size=32, verbose=2, callbacks=[time_callback])
 _, acc = model.evaluate(dataset, verbose=0)
+
 exp_name = "input_pipeline"
 mlflow.set_experiment(exp_name)
 # Log the epoch times in MLflow
