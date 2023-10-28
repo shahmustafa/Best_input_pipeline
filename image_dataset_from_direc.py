@@ -33,6 +33,7 @@ model = build_model(num_classes)
 
 time_callback = TimeHistory()
 model.fit(keras_ds, epochs=epochs, batch_size=32, verbose=2, callbacks=[time_callback])
+_, acc = model.evaluate(keras_ds, verbose=0)
 
 exp_name = "input_pipeline"
 mlflow.set_experiment(exp_name)
@@ -41,3 +42,4 @@ with mlflow.start_run(run_name='img_ds_dir'):
     for epoch, epoch_time in enumerate(time_callback.times):
         mlflow.log_param('epoch', epochs)
         mlflow.log_metric(f'epoch_{epoch}_time', epoch_time)
+        mlflow.log_metric('accuracy', acc)
