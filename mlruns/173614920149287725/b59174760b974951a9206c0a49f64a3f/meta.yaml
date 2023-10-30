@@ -1,0 +1,15 @@
+artifact_uri: file:///mnt/vol_1/Best_input_pipeline/mlruns/173614920149287725/b59174760b974951a9206c0a49f64a3f/artifacts
+end_time: 1698479882161
+entry_point_name: ''
+experiment_id: '173614920149287725'
+lifecycle_stage: active
+run_id: b59174760b974951a9206c0a49f64a3f
+run_name: keras_gen1
+run_uuid: b59174760b974951a9206c0a49f64a3f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1698479882154
+status: 4
+tags: []
+user_id: appy1

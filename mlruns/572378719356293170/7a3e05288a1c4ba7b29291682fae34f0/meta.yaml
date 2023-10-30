@@ -1,0 +1,15 @@
+artifact_uri: file:///mnt/vol_1/Best_input_pipeline/mlruns/572378719356293170/7a3e05288a1c4ba7b29291682fae34f0/artifacts
+end_time: 1698668820144
+entry_point_name: ''
+experiment_id: '572378719356293170'
+lifecycle_stage: active
+run_id: 7a3e05288a1c4ba7b29291682fae34f0
+run_name: tfrecords
+run_uuid: 7a3e05288a1c4ba7b29291682fae34f0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1698668820122
+status: 3
+tags: []
+user_id: appy1

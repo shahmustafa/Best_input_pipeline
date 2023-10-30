@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/vol_1/Best_input_pipeline/mlruns/173614920149287725/291c6e879992431383247b1a051080bd/artifacts
+deleted_time: 1698389305235
+end_time: 1698388362282
+entry_point_name: ''
+experiment_id: '173614920149287725'
+lifecycle_stage: deleted
+run_id: 291c6e879992431383247b1a051080bd
+run_name: amazing-wolf-337
+run_uuid: 291c6e879992431383247b1a051080bd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1698388360850
+status: 4
+tags: []
+user_id: appy1

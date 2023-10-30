@@ -1,0 +1,16 @@
+artifact_uri: file:///mnt/vol_1/Best_input_pipeline/mlruns/173614920149287725/24871940f9bd4a40b14a0e18026a790b/artifacts
+deleted_time: 1698389305236
+end_time: 1698388042869
+entry_point_name: ''
+experiment_id: '173614920149287725'
+lifecycle_stage: deleted
+run_id: 24871940f9bd4a40b14a0e18026a790b
+run_name: charming-mare-992
+run_uuid: 24871940f9bd4a40b14a0e18026a790b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1698388037962
+status: 4
+tags: []
+user_id: appy1

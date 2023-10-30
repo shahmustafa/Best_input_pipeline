@@ -1,0 +1,15 @@
+artifact_uri: file:///mnt/vol_1/Best_input_pipeline/mlruns/572378719356293170/507716c29ec34612bbe16dab44f9807b/artifacts
+end_time: 1698652540918
+entry_point_name: ''
+experiment_id: '572378719356293170'
+lifecycle_stage: active
+run_id: 507716c29ec34612bbe16dab44f9807b
+run_name: tensor_slice
+run_uuid: 507716c29ec34612bbe16dab44f9807b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1698652540896
+status: 3
+tags: []
+user_id: appy1

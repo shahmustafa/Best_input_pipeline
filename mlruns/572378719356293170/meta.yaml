@@ -1,0 +1,6 @@
+artifact_location: file:///mnt/vol_1/Best_input_pipeline/mlruns/572378719356293170
+creation_time: 1698650748733
+experiment_id: '572378719356293170'
+last_update_time: 1698650748733
+lifecycle_stage: active
+name: input_pipeline_final

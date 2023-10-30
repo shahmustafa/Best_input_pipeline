@@ -1,0 +1,15 @@
+artifact_uri: file:///mnt/vol_1/Best_input_pipeline/mlruns/572378719356293170/e74f0dcee50b4b43851dc3ee689652e4/artifacts
+end_time: 1698652252412
+entry_point_name: ''
+experiment_id: '572378719356293170'
+lifecycle_stage: active
+run_id: e74f0dcee50b4b43851dc3ee689652e4
+run_name: img_ds_dir
+run_uuid: e74f0dcee50b4b43851dc3ee689652e4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1698652252391
+status: 3
+tags: []
+user_id: appy1
