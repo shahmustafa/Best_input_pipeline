@@ -21,7 +21,7 @@ class TimeHistory(tf.keras.callbacks.Callback):
 path = 'WasteImagesDataset'
 IMG_SIZE = 224
 batch_size = 32
-epochs = 2
+epochs = 10
 
 
 # with mlflow.start_run():
@@ -51,7 +51,7 @@ def make_tfrecords(path, record_file='images.tfrecords'):
             writer.write(tf_example)
 
 
-make_tfrecords(path)
+# make_tfrecords(path)
 
 
 # Train with TFrecords
@@ -86,12 +86,12 @@ dataset = read_dataset('images.tfrecords', batch_size)
 num_classes = len(os.listdir(path))
 num_images = len(glob(path + '/*/*'))
 model = build_model(num_classes)
-
+# steps_per_epoch=math.ceil(num_images/batch_size)
 time_callback = TimeHistory()
-model.fit(dataset, epochs=epochs, batch_size=32, verbose=2, steps_per_epoch=math.ceil(num_images/batch_size), callbacks=[time_callback])
+model.fit(dataset, epochs=epochs, batch_size=32, verbose=2, callbacks=[time_callback])
 _, acc = model.evaluate(dataset, verbose=0)
 
-exp_name = "input_pipeline"
+exp_name = "input_pipeline_final"
 mlflow.set_experiment(exp_name)
 # Log the epoch times in MLflow
 with mlflow.start_run(run_name='tfrecords'):

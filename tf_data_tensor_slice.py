@@ -52,7 +52,7 @@ def make_dataset(path, batch_size):
 path = 'WasteImagesDataset'
 IMG_SIZE = 224
 batch_size = 32
-epochs = 5
+epochs = 10
 
 dataset = make_dataset(path, batch_size=batch_size)
 num_classes = len(os.listdir(path))
@@ -62,7 +62,7 @@ time_callback = TimeHistory()
 model.fit(dataset, epochs=epochs, batch_size=32, verbose=2, callbacks=[time_callback])
 _, acc = model.evaluate(dataset, verbose=0)
 
-exp_name = "input_pipeline"
+exp_name = "input_pipeline_final"
 mlflow.set_experiment(exp_name)
 # Log the epoch times in MLflow
 with mlflow.start_run(run_name='tensor_slice'):
