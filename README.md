@@ -5,3 +5,4 @@ A comparison between Keras’ ImageDataGenerator, TensorFlow’s image_dataset_f
 - tf.keras.preprocessing.image_dataset_from_directory
 - tf.data.Dataset with image files
 - tf.data.Dataset with TFRecords
+![](/home/appy1/Downloads/newplot (4).png "Comparision of time per epoch")
