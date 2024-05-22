@@ -10,3 +10,4 @@ A comparison between Keras’ ImageDataGenerator, TensorFlow’s image_dataset_f
 
 changed from forked repo
 changes2
+changes3
