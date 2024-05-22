@@ -7,3 +7,5 @@ A comparison between Keras’ ImageDataGenerator, TensorFlow’s image_dataset_f
 - tf.data.Dataset with TFRecords
 
 ![Plot](/plots/input_data_pipeline.png?raw=true)
+
+changed from forked repo
